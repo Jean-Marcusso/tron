@@ -1,0 +1,13 @@
+
+services:
+  api:
+    build: .
+    container_name: api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mounts the current directory on the host to /app in the container
+      # This allows for live-reloading of the code.
+      - .:/app
+
+
